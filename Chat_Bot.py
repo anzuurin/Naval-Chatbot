@@ -50,7 +50,7 @@ with st.sidebar:
 
 # Connect to Zilliz Cloud cluster
 CLUSTER_ENDPOINT = "https://in03-cf607103ea8262d.serverless.gcp-us-west1.cloud.zilliz.com"
-TOKEN = zilliz_token
+TOKEN = st.secrets["ZILLIZ_TOKEN"]
 connections.connect(uri=CLUSTER_ENDPOINT, token=TOKEN)
 
 # Load model and tokenizer from Hugging Face Hub
