@@ -1,0 +1,17 @@
+huggingface_hub==0.26.2
+langchain==0.3.11
+langchain_chroma==0.1.4
+langchain_community==0.3.11
+langchain_huggingface==0.1.2
+numpy==2.2.0
+protobuf==5.29.1
+pymilvus==2.4.9
+pyspellchecker==0.8.1
+python-dotenv==1.0.1
+Requests==2.32.3
+spellchecker==0.4
+streamlit==1.40.0
+streamlit_shadcn_ui==0.1.18
+torch==2.2.2
+transformers==4.46.2
+utils==1.0.2
