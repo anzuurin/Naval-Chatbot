@@ -1,6 +1,5 @@
 import streamlit as st
-import sys
-from transformers import AutoTokenizer, AutoModel, pipeline
+from transformers import AutoTokenizer, AutoModel
 import torch
 from pymilvus import connections, Collection, AnnSearchRequest, WeightedRanker
 from spellchecker import SpellChecker
