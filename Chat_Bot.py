@@ -19,7 +19,7 @@ spell = SpellChecker()
 # Function to interact with Ollama API
 def query_ollama(prompt, model="llama3.2:latest"):
     print("hey1")
-    url = "http://ollama:11434/api/generate"
+    url = "http://localhost:11434/api/generate"
     headers = {"Content-Type": "application/json"}
     payload = {
         "model": model,
