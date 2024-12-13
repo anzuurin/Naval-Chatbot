@@ -8,8 +8,6 @@ import json
 import streamlit_shadcn_ui as ui
 import ollama
 
-ollama.pull('llama3.2')
-
 st.set_page_config(
     page_title="Navy Chat",
     page_icon="🚢",
