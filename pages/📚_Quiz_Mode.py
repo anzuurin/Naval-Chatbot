@@ -1,6 +1,5 @@
 import streamlit as st
-import sys
-from transformers import AutoTokenizer, AutoModel, pipeline
+from transformers import AutoTokenizer, AutoModel
 import torch
 from pymilvus import connections, Collection, AnnSearchRequest, WeightedRanker
 from spellchecker import SpellChecker
@@ -21,8 +20,8 @@ total_questions = 0
 # Streamlit Sidebar for configuration
 with st.sidebar:
     st.title("Learning Mode")
-    st.markdown("**Note**: You must have a working zilliz token so that our model can run, otherwise you will get an error.")
-    zilliz_token = st.text_input("Zilliz Token", None, type="password")
+    # st.markdown("**Note**: You must have a working zilliz token so that our model can run, otherwise you will get an error.")
+    # zilliz_token = st.text_input("Zilliz Token", None, type="password")
     st.markdown('''
     **How It Works**
                 
@@ -54,7 +53,6 @@ def query_ollama(prompt, model="llama3.2:latest"):
         print("awaiting response...\n")
         response = requests.post(url, headers=headers, data=json.dumps(payload), stream=False)
         print("Response received.\n")
-        # response.raise_for_status()
                 
         return response
     except requests.exceptions.RequestException as e:
@@ -62,12 +60,12 @@ def query_ollama(prompt, model="llama3.2:latest"):
         return None
 
 # checks for token first
-if zilliz_token is None:
-    st.error("No Zilliz token provided. Cannot run model.")
+# if zilliz_token is None:
+#     st.error("No Zilliz token provided. Cannot run model.")
 
 # Connect to Zilliz Cloud cluster
 CLUSTER_ENDPOINT = "https://in03-cf607103ea8262d.serverless.gcp-us-west1.cloud.zilliz.com"
-TOKEN = zilliz_token
+TOKEN = st.secrets["ZILLIZ_TOKEN"]
 connections.connect(uri=CLUSTER_ENDPOINT, token=TOKEN)
 
 # Load model and tokenizer from Hugging Face Hub
