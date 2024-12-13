@@ -41,8 +41,6 @@ def query_ollama(prompt, model="llama3.2:latest"):
 with st.sidebar:
     st.title("🚢 Medical Navy Chatbot 💬")
     st.write("Configure your chatbot settings below.")
-    st.markdown("**Note**: You must have a working zilliz token so that our model can run, otherwise you will get an error.")
-    zilliz_token = st.text_input("Zilliz Token", None, type="password")
 
 # Connect to Zilliz Cloud cluster
 CLUSTER_ENDPOINT = "https://in03-cf607103ea8262d.serverless.gcp-us-west1.cloud.zilliz.com"
