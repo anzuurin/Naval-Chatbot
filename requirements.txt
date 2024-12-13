@@ -2,7 +2,7 @@ pymilvus==2.4.9
 pyspellchecker==0.8.1
 python-dotenv==1.0.1
 Requests==2.32.3
-spellchecker==0.4
+pyspellchecker==0.8.1
 streamlit==1.40.0
 streamlit_shadcn_ui==0.1.18
 torch==2.2.2
