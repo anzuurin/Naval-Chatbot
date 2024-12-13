@@ -6,7 +6,6 @@ from spellchecker import SpellChecker
 import requests
 import json
 import streamlit_shadcn_ui as ui
-import ollama
 
 st.set_page_config(
     page_title="Navy Chat",
