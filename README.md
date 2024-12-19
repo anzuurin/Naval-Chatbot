@@ -1,7 +1,9 @@
 # Naval-Chatbot
 Team: Melody Llinas, Bruke Amare, Udom An, Miya Reese, & Mark Zhang
 
-This project is for the 2024 UNH ML-Hackathon.
+This project is for the 2024 UNH ML-Hackathon. 
+
+## We were awarded 2nd place!
 
 # Navy Medical Chatbot Project
 -------------------------------
